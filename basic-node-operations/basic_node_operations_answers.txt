@@ -1,0 +1,145 @@
+1. Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+Sort command alphabetically sorts the lines of codes within commands.js.
+sort commands.js
+OUTPUT:
+done(data);
+      if (err) throw err;
+    });
+    break;
+    break;
+    case 'cat': commandLibrary.cat(userInputArray.slice(1));
+    case 'echo': commandLibrary.echo(userInputArray.slice(1).join(''));
+    fileName = fullPath[0];
+    fs.readFile(fileName, (err, data) => {
+
+  }
+  }
+  'cat' : function(fullPath){
+  const command = userInputArray[0];
+  const userInputArray = userInput.split(' ');
+  done(userInput);
+  'echo' : function(userInput){
+  process.stdout.write('\nprompt > ');
+  process.stdout.write(output);
+  switch(command){
+
+
+
+
+
+
+
+
+}
+}
+},
+
+};
+const commandLibrary = {
+const fs = require('fs');
+function done(output){
+function evaluateCmd(userInput){
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+WC: returns the no.of lines, words, bytes in the commands.js.
+wc commands.js //  37  67 793 commands.js
+
+uniq: uniq filters out adjacent, matching lines from commands.js.
+
+OUTPUT
+const fs = require('fs');
+
+function done(output){
+  process.stdout.write(output);
+  process.stdout.write('\nprompt > ');
+}
+
+function evaluateCmd(userInput){
+  const userInputArray = userInput.split(' ');
+  const command = userInputArray[0];
+
+  switch(command){
+    case 'echo': commandLibrary.echo(userInputArray.slice(1).join(''));
+    break;
+
+    case 'cat': commandLibrary.cat(userInputArray.slice(1));
+    break;
+  }
+}
+
+const commandLibrary = {
+  'echo' : function(userInput){
+  done(userInput);
+},
+
+  'cat' : function(fullPath){
+    fileName = fullPath[0];
+    fs.readFile(fileName, (err, data) => {
+      if (err) throw err;
+      done(data);
+    });
+  }
+
+};
+
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+
+2. Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the
+specific data was outputted.
+
+a. sort commands.js | uniq
+First sorts and then performs uniq operation on commands.js; output is a sorted files with no duplicate lines
+OUTPUT:
+done(data);
+if (err) throw err;
+});
+break;
+case 'cat': commandLibrary.cat(userInputArray.slice(1));
+case 'echo': commandLibrary.echo(userInputArray.slice(1).join(''));
+fileName = fullPath[0];
+fs.readFile(fileName, (err, data) => {
+}
+'cat' : function(fullPath){
+const command = userInputArray[0];
+const userInputArray = userInput.split(' ');
+done(userInput);
+'echo' : function(userInput){
+process.stdout.write('\nprompt > ');
+process.stdout.write(output);
+switch(command){
+
+}
+},
+};
+const commandLibrary = {
+const fs = require('fs');
+function done(output){
+function evaluateCmd(userInput){
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+b. sort commands.js | uniq | wc //first sorts the file and passes the output as input to perform uniq, then passes that
+output to perform wc.
+
+OUTPUT: 27      64     759
+
+
+6. Reverse String
+
+function reverseString(inputString){
+  let arr = [];
+  newArray = inputString.split(' ');
+  newArray.forEach((item) => {
+    itemArray = item.split('').reverse();
+    item = itemArray.join('');
+    arr.push(item);
+    outputString = arr.join(' ');
+  });
+  console.log(outputString);
+  return outputString;
+}
+
+reverseString("I'm learning to program algorithms!");
